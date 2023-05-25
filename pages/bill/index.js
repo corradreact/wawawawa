@@ -18,6 +18,12 @@ const Crud = () => {
                     <span>Senarai bil Cukai Taksiran</span>
                 </div>
             </div>
+            <div className="col-12">
+                <div className="card" onClick={() =>  router.push("/bill/lesen")} >
+                    <h5>Lesen</h5>
+                    <span>Senarai bil Lesen</span>
+                </div>
+            </div>
         </div>
     );
 };
