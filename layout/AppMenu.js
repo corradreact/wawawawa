@@ -14,12 +14,16 @@ const AppMenu = () => {
         },
         {
             label: 'Menu Utama',
-            items: [{ label: 'Bill', icon: 'pi pi-fw pi-home', to: '/bill' }],            
+            items: [
+                { label: 'Bill', icon: 'pi pi-fw pi-home', to: '/bill' },
+                { label: 'Profile', icon: 'pi pi-fw pi-home', to: '/profile' },
+                { label: 'User', icon: 'pi pi-fw pi-home', to: '/user' },
+            ],            
             subitems: [ { label: 'Cukai', icon: 'pi pi-fw pi-home', to: '/bill/cukai' },
                         { label: 'Lesen', icon: 'pi pi-fw pi-home', to: '/bill/lesen' },
                         ]
         },
-       /* {
+       {
             label: 'UI Components',
             items: [
                 { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
@@ -166,7 +170,7 @@ const AppMenu = () => {
                     target: '_blank'
                 }
             ]
-        }*/
+        }
     ];
 
     return (
@@ -176,9 +180,6 @@ const AppMenu = () => {
                     return !item.seperator ? <AppMenuitem item={item} root={true} index={i} key={item.label} /> : <li className="menu-separator"></li>;
                 })}
 
-                <Link href="https://blocks.primereact.org" target="_blank" style={{ cursor: 'pointer' }}>
-                   <img alt="Prime Blocks" className="w-full mt-3" src={`/layout/images/banner-primeblocks${layoutConfig.colorScheme === 'light' ? '' : '-dark'}.png`} />
-                </Link>
             </ul>
         </MenuProvider>
     );
